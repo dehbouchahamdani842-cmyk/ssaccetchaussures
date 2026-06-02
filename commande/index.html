@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Commande – Dream Bag & Heel</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="commande.css">
+</head>
+<body>
+
+  <div class="bg-black text-white text-center py-3 text-sm font-medium tracking-wide">
+    PROMO SPÉCIALE : -20% sur tous les Mocassins • Livraison gratuite dès 700€ et 101 000DA
+  </div>
+
+  <nav class="sticky top-0 z-50 py-4 bg-transparent">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="bg-[#fff9f0] rounded-3xl shadow-md flex items-center justify-between px-10 py-4">
+        <a href="../index.html">
+          <img src="im/pp.png" alt="Dream Bag & Heel" class="h-16 w-auto object-contain">
+        </a>
+        <div class="flex items-center gap-10 text-base font-medium text-gray-700">
+          <a href="../" class="hover:text-[#d4a373] transition">Accueil</a>
+          <a href="../produits/" class="hover:text-[#d4a373] transition">Collection</a>
+          <a href="../#apropos" class="hover:text-[#d4a373] transition">À propos</a>
+          <a href="../#contact" class="hover:text-[#d4a373] transition">Contact</a>
+          <a href="./" class="hover:text-brown-600">commande</a>
+          <a href="../inscription/" class="hover:text-brown-600">Inscrire</a>
+        </div>
+        <div class="flex items-center gap-6 text-2xl text-gray-700">
+          <i class="fas fa-heart cursor-pointer hover:text-[#d4a373] transition" onclick="window.location.href='../favoris/'"></i>
+          <a href="../panier/" class="relative hover:text-[#d4a373] transition">
+            <i class="fas fa-shopping-bag cursor-pointer"></i>
+            <span id="cart-badge" class="text-xs bg-[#d4a373] text-white rounded-full px-1.5 py-0.5 absolute -top-3 -right-3 text-[10px]">0</span>
+          </a>
+          <i class="fas fa-user cursor-pointer hover:text-[#d4a373] transition" onclick="window.location.href='../login/'"></i>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="form-card">
+      <form id="payment-form">
+        <div class="section">
+          <h2>ADRESSE DE FACTURATION</h2>
+          <label>Nom complet :</label>
+          <input type="text" id="full-name" placeholder="Nom complet" required>
+          <label>Email :</label>
+          <input type="email" id="email" placeholder="Votre email" required>
+          <label>pays :</label>
+          <input type="pays" id="pays" placeholder="pays" required>
+          <label>Adresse :</label>
+          <input type="text" id="address" placeholder="Adresse complète" required>
+          <label>numéro de téléphone :</label>
+          <input type="text" id="numéro de téléphone" placeholder="numéro de téléphone" required>
+          <div class="row">
+            <div class="col">
+              <label>Ville :</label>
+              <input type="text" id="city" placeholder="Ville" required>
+            </div>
+            <div class="col">
+              <label>État / Région :</label>
+              <input type="text" id="state" placeholder="État ou région">
+            </div>
+            <div class="col">
+              <label>Code postal :</label>
+              <input type="text" id="zip" placeholder="12345" value="12345">
+            </div>
+          </div>
+        </div>
+        <div class="section">
+          <h2>PAIEMENT</h2>
+          <label>Cartes acceptées :</label>
+          <div class="section">
+  <h2>PAIEMENT</h2>
+  <label>Choisissez votre carte :</label>
+  <div class="card-selector">
+    <button type="button" class="card-btn" data-card="visa" onclick="selectCard(this)">
+      <img src="im/cartevisajpg.jpg" alt="carte visa france">
+      <span>carte visa france</span>
+    </button>
+    <button type="button" class="card-btn" data-card="mastercard" onclick="selectCard(this)">
+      <img src="im/cartedahabia.png" alt="carte magnétique algérie">
+      <span>carte magnétique algérie</span>
+    </button>
+  </div>
+  <div id="card-error" class="error-msg" style="display:none; color:#c0392b; font-size:0.85rem; margin-bottom:10px;">
+    Veuillez sélectionner un type de carte.
+  </div>
+  <!-- reste du formulaire inchangé -->
+          <label>Nom sur la carte :</label>
+          <input type="text" id="card-name" placeholder="Nom sur la carte" required>
+          <label>Numéro de carte :</label>
+          <input type="text" id="card-number" placeholder="XXXX-XXXX-XXXX-XXXX" maxlength="19" required>
+          <div class="row">
+            <div class="col">
+              <label>Mois d'expiration :</label>
+              <input type="text" id="exp-month" placeholder="MM" maxlength="2" required>
+            </div>
+            <div class="col">
+              <label>Année d'expiration :</label>
+              <input type="text" id="exp-year" placeholder="AA" maxlength="2" required>
+            </div>
+            <div class="col">
+              <label>Code CVV :</label>
+              <input type="text" id="cvv" placeholder="XXX" maxlength="4" required>
+            </div>
+          </div>
+        </div>
+        <button type="submit" class="submit-btn">Confirmer la commande</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="commande.js"></script>
+  <script>
+    const cart = JSON.parse(localStorage.getItem('cart') || '[]');
+    document.getElementById('cart-badge').textContent =
+      cart.reduce((s, i) => s + (i.quantity || 1), 0);
+  </script>
+</body>
+</html>

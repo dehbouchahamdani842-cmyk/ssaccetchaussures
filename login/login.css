@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+.background {
+    flex: 1;
+    background: linear-gradient(135deg, #ffffff 0%, #ffffff 50%, #ffffff 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+
+.login-card {
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(12px);
+    border-radius: 28px;
+    padding: 50px 40px;
+    width: 100%;
+    max-width: 420px;
+    box-shadow: 0 15px 40px rgba(209, 143, 94, 0.25);
+    text-align: center;
+}
+
+h1 {
+    color: #d18f5e;
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    color: #b88a6a;
+    margin-bottom: 35px;
+    font-size: 16px;
+}
+
+/* ====== CHAMPS DE SAISIE ====== */
+.input-group {
+    margin-bottom: 18px;
+    position: relative;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 16px 20px;
+    border: none;
+    border-radius: 50px;
+    background: #f5ede5;
+    font-size: 16px;
+    outline: none;
+    transition: all 0.3s;
+    color: #444;
+}
+
+.input-group input::placeholder {
+    color: #bba898;
+}
+
+.input-group input:focus {
+    background: #fceee4;
+    box-shadow: 0 0 0 3px rgba(209, 143, 94, 0.25);
+}
+
+
+.password-group {
+    position: relative;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 18px;
+    color: #b88a6a;
+    user-select: none;
+}
+
+
+.btn-connect {
+    width: 100%;
+    padding: 16px;
+    margin: 10px 0 25px 0;
+    background: linear-gradient(90deg, #f3d1b5, #edcfa8);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 6px 20px rgba(236, 202, 170, 0.5);
+    transition: 0.3s;
+    letter-spacing: 0.5px;
+}
+
+.btn-connect:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(236, 202, 170, 0.6);
+}
+
+.btn-connect:active {
+    transform: translateY(-1px);
+}
+
+.forgot-password a {
+    color: #b88a6a;
+    text-decoration: none;
+    font-size: 15px;
+    transition: color 0.2s;
+}
+
+.forgot-password a:hover {
+    color: #d18f5e;
+    text-decoration: underline;
+}
+
+.create-account {
+    margin-top: 24px;
+}
+
+.btn-create {
+    width: 100%;
+    padding: 14px;
+    background: transparent;
+    color: #d18f5e;
+    border: 2px solid #eccaaa;
+    border-radius: 50px;
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-create:hover {
+    background: #eccaaa;
+    color: white;
+    border-color: #eccaaa;
+}
+
+@media (max-width: 480px) {
+    .login-card {
+        padding: 36px 24px;
+        border-radius: 20px;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+}

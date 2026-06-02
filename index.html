@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dream Bag & Heel • Élégance à chaque pas</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Great+Vibes&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body class="bg-white">
+
+  <div class="bg-black text-white text-center py-3 text-sm font-medium tracking-wide">
+    PROMO SPÉCIALE : -20% sur tous les Mocassins • Livraison gratuite dès 700€ et 101 000DA
+  </div>
+
+  <nav class="sticky top-0 z-50 py-6 bg-transparent">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="bg-[#fff9f0] rounded-3xl shadow-md flex items-center justify-between px-10 py-5">
+        <a href="index.html">
+          <img src="im/pp.png" alt="Dream Bag & Heel" class="logo-navbar">
+        </a>
+
+        <div class="flex items-center gap-10 text-base font-medium text-gray-700">
+          <a href="index.html" class="hover:text--600 font-medium">Accueil</a>
+          <a href="produits/" class="hover:text-brown-600">Collection</a>
+          <a href="#apropos" class="hover:text-brown-600">À propos</a>
+          <a href="#contact" class="hover:text-brown-600">Contact</a>
+          <a href="commande/" class="hover:text-brown-600">commande</a> 
+          <a href="inscription/" class="hover:text-brown-600">Inscrire</a> 
+        </div>
+
+        <div class="flex items-center gap-6 text-2xl text-gray-700">
+          <i class="fas fa-heart cursor-pointer hover:text-brown-600 transition" onclick="window.location.href='favoris/'"></i>
+          <a href="panier/" class="relative hover:text-brown-600 transition">
+            <i class="fas fa-shopping-bag cursor-pointer"></i>
+            <span id="cartCount" class="text-xs bg-brown-600 text-white rounded-full px-1.5 py-0.5 -mt-4 -ml-1 absolute text-[10px]">0</span>
+          </a>
+          <i class="fas fa-user cursor-pointer hover:text-brown-600 transition" onclick="window.location.href='login/'"></i>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <img src="im/combined_horizontal (1).jpg" alt="Dream Bag & Heel">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h2>𝓓𝓻𝒆𝓪𝓶 ℬ𝓪𝓰 & ℋ𝒆𝒆𝓵</h2>
+      <p class="slogan">𝓣𝓮𝓷𝓭𝓪𝓷𝓬𝓮 • 𝓔́𝓵𝓮́𝓰𝓪𝓷𝓬𝓮 • 𝓒𝓸𝓷𝓯𝓸𝓻𝓽</p>
+      <a href="produits/" class="btn-hero">Découvrir la Collection</a>
+    </div>
+  </section>
+
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center text-background-700 mb-12">𝒟𝑒́𝒸𝑜𝓊𝓋𝓇𝑒𝓏 𝓃𝑜𝓈 𝓂𝒶𝓇𝓆𝓊𝑒𝓈</h2>
+
+      <div class="categories-container">
+        <div class="categories-scroll">
+          <div class="category-card">
+            <img src="im/image4.jpg" alt="Ensemble coordonné beige">
+            <div class="category-label">écru</div>
+          </div>
+          <div class="category-card">
+            <img src="im/image3.jpg" alt="Chaussures">
+            <div class="category-label">Miu Miu</div>
+          </div>
+          <div class="category-card">
+            <img src="im/image2.jpg" alt="Ensembles">
+            <div class="category-label">Chanel</div>
+          </div>
+          <div class="category-card">
+            <img src="im/image1.jpg" alt="Accessoires">
+            <div class="category-label">glamour bordeaux</div>
+          </div>
+          <div class="category-card">
+            <img src="im/image5.jpg" alt="Sacs">
+            <div class="category-label">louis vuitton</div>
+          </div>
+          <div class="category-card">
+            <img src="im/image6.png" alt="Chaussures">
+            <div class="category-label">dior</div>
+          </div>
+          <div class="category-card">
+            <img src="im/image7.jpg" alt="Ensembles">
+            <div class="category-label">celine</div>
+          </div>
+          <div class="category-card">
+            <img src="im/image8.jpg" alt="Accessoires">
+            <div class="category-label">COACH</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about-section" id="apropos">
+    <div class="about-container">
+      <div class="text-center mb-16">
+        <span class="section-title">À PROPOS DE NOUS</span>
+        <img src="im/pp.png" alt="Dream Bag & Heel Logo" class="logo-about">
+        <h2 class="about-title">Une marque passionnée par l'élégance</h2>
+        <div class="underline"></div>
+        <p class="founded text-gray-600">FONDÉE EN 2025 — France</p>
+      </div>
+
+      <div class="about-content">
+        <div>
+          <p class="about-text">
+            Dream Bag & Heel est une marque dédiée à l'excellence et à la féminité.
+            Nous créons des sacs et des chaussures qui allient luxe, confort et sophistication.
+            Chaque pièce est pensée pour accompagner les femmes audacieuses qui osent affirmer
+            leur style avec grâce et assurance.
+          </p>
+          <br>
+          <p class="about-text">
+            Où chaque pas raconte une histoire, et chaque accessoire révèle une femme qui ose briller.
+          </p>
+        </div>
+        <div>
+          <p class="about-text">
+            Chaque création est une nouvelle aventure que nous abordons avec passion et rigueur.
+            Nous croyons que le design n'est pas seulement esthétique — c'est un outil puissant
+            de confiance et de transformation.
+          </p>
+        </div>
+      </div>
+
+      <div class="stats">
+        <div class="stat-item">
+          <h2>03+</h2>
+          <p>Années d'expérience</p>
+        </div>
+        <div class="stat-item">
+          <h2>120+</h2>
+          <p>Produits créés</p>
+        </div>
+        <div class="stat-item">
+          <h2>98%</h2>
+          <p>Clients satisfaits</p>
+        </div>
+        <div class="stat-item">
+          <h2>45+</h2>
+          <p>Modèles exclusifs</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-white border-t border-gray-200 pt-12 pb-8" id="contact"> 
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
+
+        <div>
+          <img src="im/logo.png" alt="Dream Bag & Heel" class="h-14 mb-4">
+          <p class="text-gray-600 leading-relaxed text-[15px]">
+            Dream Bag & Heel vous propose une sélection élégante de sacs et chaussures pour femme.<br><br>
+            Commandez en ligne et profitez d'une livraison rapide partout en France,
+            avec des prix soigneusement étudiés.
+          </p>
+        </div>
+
+        <div>
+          <h3 class="font-semibold text-lg mb-5 text-[#3a2a1f]">NOS MAGASINS</h3>
+          <ul class="space-y-3 text-gray-600">
+            <li><a href="#" class="hover:text-[#d4a373] transition">Magasin Dream Bag & Heel Strasbourg</a></li>
+            <li><a href="#" class="hover:text-[#d4a373] transition">Magasin Dream Bag & Heel Paris</a></li>
+            <li><a href="#" class="hover:text-[#d4a373] transition">Magasin Dream Bag & Heel Bordeaux</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="font-semibold text-lg mb-5 text-[#3a2a1f]">LIENS UTILES</h3>
+          <ul class="space-y-3 text-gray-600">
+            <li><a href="#" class="hover:text-[#d4a373] transition">Livraison & Délais</a></li>
+            <li><a href="#" class="hover:text-[#d4a373] transition">Guide des tailles</a></li>
+            <li><a href="#" class="hover:text-[#d4a373] transition">Promotions</a></li>
+            <li><a href="login/" class="hover:text-[#d4a373] transition">Nous Contacter</a></li>
+            <li><a href="#" class="hover:text-[#d4a373] transition">Politique de confidentialité</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="font-semibold text-lg mb-5 text-[#3a2a1f]">SUIVEZ-NOUS</h3>
+          <div class="flex gap-6 text-2xl text-gray-600">
+            <a href="#" class="hover:text-[#d4a373] transition"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="hover:text-[#d4a373] transition"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="hover:text-[#d4a373] transition"><i class="fab fa-tiktok"></i></a>
+          </div>
+          <div class="mt-10 text-sm text-gray-500">
+            <p>📍 18 Rue de Passy 75016 Paris</p>
+            <p>📍 Petite France, 67000 Strasbourg</p>
+            <p>📍 Place de la Bourse, 33000 Bordeaux</p>
+            <p class="mt-1">✉️ contact@dreambagheel.com</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="border-t border-gray-200 mt-12 pt-8 text-center text-gray-500 text-sm">
+        © 2026 Dream Bag & Heel - Tous droits réservés
+      </div>
+    </div>
+  </footer>
+
+  <script src="index.js"></script>
+</body>
+</html>

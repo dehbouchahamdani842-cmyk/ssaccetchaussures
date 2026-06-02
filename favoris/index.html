@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mes Favoris - Dream Bag & Heel</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <link rel="stylesheet" href="favoris.css">
+</head>
+<body class="bg-[#f9f7f5]">
+
+  <div class="bg-black text-white text-center py-3 text-sm font-medium tracking-wide">
+    PROMO SPÉCIALE : -20% sur tous les Mocassins • Livraison gratuite dès 700€ et 101 000DA
+  </div>
+
+  <nav class="sticky top-0 z-50 py-4 bg-transparent">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="bg-[#fff9f0] rounded-3xl shadow-md flex items-center justify-between px-10 py-4">
+        <a href="../index.html">
+          <img src="../../im/pp.png" alt="Dream Bag & Heel" class="h-16 w-auto object-contain">
+        </a>
+        <div class="flex items-center gap-10 text-base font-medium text-gray-700">
+          <a href="../" class="hover:text-[#d4a373] transition">Accueil</a>
+          <a href="../produits/" class="hover:text-[#d4a373] transition">Collection</a>
+          <a href="../#apropos" class="hover:text-[#d4a373] transition">À propos</a>
+          <a href="../#contact" class="hover:text-[#d4a373] transition">Contact</a>
+          <a href="../commande/" class="hover:text-brown-600">commande</a>
+          <a href="../inscription/" class="hover:text-brown-600">Inscrire</a>
+        </div>
+        <div class="flex items-center gap-6 text-2xl text-gray-700">
+          <i class="fas fa-heart cursor-pointer text-[#d4a373]"></i>
+          <a href="../panier/" class="relative hover:text-[#d4a373] transition">
+            <i class="fas fa-shopping-bag cursor-pointer"></i>
+            <span id="cart-badge" class="text-xs bg-[#d4a373] text-white rounded-full px-1.5 py-0.5 absolute -top-3 -right-3 text-[10px]">0</span>
+          </a>
+          <i class="fas fa-user cursor-pointer hover:text-[#d4a373] transition" onclick="window.location.href='../login/'"></i>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="max-w-7xl mx-auto px-6 py-12">
+    <h1 class="text-4xl md:text-5xl font-bold text-center mb-12 title-favoris">
+      Mes Favoris
+    </h1>
+    <div id="favoris-container">
+      <p id="empty-message" class="text-center text-xl py-20 text-gray-500 hidden">
+        Vous n'avez pas encore ajouté d'articles à vos favoris 
+      </p>
+      <div id="favoris-list" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8"></div>
+    </div>
+  </main>
+
+  <footer class="bg-white border-t border-gray-200 mt-16">
+    <div class="max-w-7xl mx-auto px-6 py-10 text-center text-gray-500 text-sm">
+      © 2026 Dream Bag & Heel - Tous droits réservés
+    </div>
+  </footer>
+
+  <script src="favoris.js"></script>
+  <script>
+    const cart = JSON.parse(localStorage.getItem('cart') || '[]');
+    document.getElementById('cart-badge').textContent =
+      cart.reduce((s, i) => s + (i.quantity || 1), 0);
+  </script>
+</body>
+</html>

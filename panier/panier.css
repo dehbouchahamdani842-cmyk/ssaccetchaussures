@@ -1,0 +1,119 @@
+.panier-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    font-family: 'Segoe UI', sans-serif;
+}
+
+h1 {
+    text-align: center;
+    color: #caab87;
+    margin-bottom: 30px;
+    font-size: 32px;
+}
+
+.liste-produits {
+    min-height: 200px;
+}
+
+.item-panier {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.item-panier img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.info-produit {
+    flex: 1;
+}
+
+.info-produit h3 {
+    margin: 0 0 5px 0;
+    color: #333;
+}
+
+.quantite {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 8px 0;
+}
+
+.quantite button {
+    width: 30px;
+    height: 30px;
+    background: #caab87;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.prix {
+    font-weight: bold;
+    color: #caab87;
+    font-size: 18px;
+}
+
+.btn-supprimer {
+    background:#ff4d4d;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.prix-total {
+    font-size: 24px;
+    text-align: right;
+    margin: 30px 0;
+    font-weight: 600;
+    color: #333;
+}
+
+.bouton-final {
+    text-align: center;
+}
+
+
+.btn-valider {
+    background: linear-gradient(135deg, #ebc38e, #e8bf93);
+    color: white;
+    border: none;
+    padding: 16px 40px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 50px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+}
+
+.btn-valider:hover {
+    background: linear-gradient(135deg, #edc99a, #f5d190);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(236, 185, 151, 0.991);
+}
+
+.btn-retour {
+    background: transparent;
+    border: 2px solid #caab87;
+    color: #caab87;
+    padding: 10px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Boutique · Accueil Favoris Connexion Panier</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <link rel="stylesheet" href="produits.css">
+</head>
+<body>
+ <div class="bg-black text-white text-center py-3 text-sm font-medium tracking-wide">
+    PROMO SPÉCIALE : -20% sur tous les Mocassins • Livraison gratuite dès 700€ et 101 000DA
+  </div>
+
+  <nav class="sticky top-0 z-50 py-4 bg-transparent">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="bg-[#fff9f0] rounded-3xl shadow-md flex items-center justify-between px-10 py-4">
+        <a href="../index.html">
+          <img src="../im/pp.png" alt="Dream Bag & Heel" class="h-16 w-auto object-contain">
+        </a>
+        <div class="flex items-center gap-10 text-base font-medium text-gray-700">
+          <a href="../" class="hover:text-[#d4a373] transition">Accueil</a>
+          <a href="./" class="hover:text-[#d4a373] transition">Collection</a>
+          <a href="../#apropos" class="hover:text-[#d4a373] transition">À propos</a>
+          <a href="../#contact" class="hover:text-[#d4a373] transition">Contact</a>
+          <a href="../commande/" class="hover:text-brown-600">commande</a>
+          <a href="../inscription/" class="hover:text-brown-600">Inscrire</a>
+        </div>
+        <div class="flex items-center gap-6 text-2xl text-gray-700">
+          <i class="fas fa-heart cursor-pointer hover:text-[#d4a373] transition" onclick="window.location.href='../favoris/'"></i>
+          <a href="../panier/" class="relative hover:text-[#d4a373] transition">
+            <i class="fas fa-shopping-bag cursor-pointer"></i>
+            <span id="cart-badge" class="text-xs bg-[#d4a373] text-white rounded-full px-1.5 py-0.5 absolute -top-3 -right-3 text-[10px]">0</span>
+          </a>
+          <i class="fas fa-user cursor-pointer hover:text-[#d4a373] transition" onclick="window.location.href='../login/'"></i>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+
+<div class="main-container">
+
+  
+  <div class="categories-bar">
+
+    <div>
+      <label class="categories-label">Catégories</label>
+      <div class="category-dropdown" id="categoryDropdown">
+        <button id="categoryTrigger" class="category-trigger" type="button" aria-expanded="false" aria-controls="categoryMenu">
+          <span id="categoryTriggerText">Sélectionner une catégorie</span>
+          <i class="fas fa-chevron-down"></i>
+        </button>
+        <div id="categoryMenu" class="category-menu">
+          <button class="category-item" onclick="selectCategory('Nouveauté')">Nouveauté</button>
+          <button class="category-item" onclick="selectCategory('Mini Sac')">Mini Sac</button>
+          <button class="category-item" onclick="selectCategory('Sac bandoulière')">Sac bandoulière</button>
+          <button class="category-item" onclick="selectCategory('Sac à Dos')">Sac à Dos</button>
+          <button class="category-item" onclick="selectCategory('Portefeuille')">Portefeuille</button>
+          <button class="category-item" onclick="selectCategory('Boots')">Boots</button>
+          <button class="category-item" onclick="selectCategory('Mules')">Mules</button>
+          <button class="category-item" onclick="selectCategory('Escarpins')">Escarpins</button>
+          <button class="category-item" onclick="selectCategory('Mocassins')">Mocassins</button>
+          <button class="category-item" onclick="selectCategory('Sandales')">Sandales</button>
+          <button class="category-item" onclick="selectCategory('Baskets')">Baskets</button>
+          <button class="category-item" onclick="selectCategory('Ballerinnes')">Ballerinnes</button>
+        </div>
+      </div>
+    </div>
+
+   
+    <div>
+      <label class="categories-label">Devise</label>
+      <div class="currency-toggle">
+        <button class="currency-btn active" id="btnEuro" onclick="setCurrency('EUR')">€ EUR</button>
+        <button class="currency-btn" id="btnDinar" onclick="setCurrency('DZD')">DA Dinar</button>
+      </div>
+    </div>
+
+  </div>
+
+  <h4 id="selectedCategoryTitle" class="selected-category-title">TOUS LES ARTICLES</h4>
+  <div class="products-grid" id="productsGrid"></div>
+  <div class="attribution">© Boutique · Élégance</div>
+
+</div>
+
+
+
+<script src="produits.js"></script>
+</body>
+</html>
